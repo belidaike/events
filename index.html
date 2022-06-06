@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        .box{
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+        .box:hover{
+            background-color: #ff8e0d;
+            cursor: pointer;
+            text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(145, 92, 182);
+
+  border-radius: 4px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 15px 25px rgba(255, 251, 0);
+        }
+        .input{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <div id="app">
+      
+
+        <br>
+        <div class="box" @click="leftClick">left click</div>
+        <div class="box" @click.right="rightClick">right click</div>
+
+          
+
+        <form class="input">
+            <label>Type: </label>
+            <input type="text" class="inputin" v-on:keyup="keymonitor">
+        </form>
+    
+    
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
